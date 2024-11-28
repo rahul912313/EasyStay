@@ -6,7 +6,7 @@ package Business.User;
 
 /**
  *
- * @author siddh
+ * @author RAHUL
  */
 public class User {
     private String userId;

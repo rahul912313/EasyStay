@@ -9,7 +9,7 @@ import Business.User.User;
 
 /**
  *
- * @author manikantareddythikkavarapu
+ * @author RAHUL
  */
 public class UserDirectory {
     private ArrayList<User> users;
