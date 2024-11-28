@@ -9,5 +9,10 @@ package Business;
  * @author RAHUL
  */
 public class ConfigureASystem {
+    public static EcoSystem configure() {
     
+        EcoSystem system = EcoSystem.getInstance();
+        
+        return system;
+    }
 }
