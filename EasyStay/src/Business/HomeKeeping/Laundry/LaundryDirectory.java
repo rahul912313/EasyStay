@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author siddh
+ * @author RAHUL
  */
 public class LaundryDirectory {
     ArrayList<Laundry> laundryDirectory;
