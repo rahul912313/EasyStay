@@ -139,10 +139,10 @@ public class CreateUserAdminPanel extends javax.swing.JPanel {
         add(createUserBtn);
         createUserBtn.setBounds(560, 670, 190, 80);
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel6.setText("Create User Role");
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel6.setText("Create User ");
         add(jLabel6);
-        jLabel6.setBounds(510, 70, 270, 30);
+        jLabel6.setBounds(580, 100, 270, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserBtnActionPerformed
