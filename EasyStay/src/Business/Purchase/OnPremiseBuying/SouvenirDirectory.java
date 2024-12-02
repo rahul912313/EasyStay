@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author siddh
+ * @author kanishk
  */
 public class SouvenirDirectory {
     ArrayList<Souvenir> souvenirDirectory;
