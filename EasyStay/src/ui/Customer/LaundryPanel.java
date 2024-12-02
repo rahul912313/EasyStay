@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Subbu
+ * @author Rushang
  */
 public class LaundryPanel extends javax.swing.JPanel {
 
