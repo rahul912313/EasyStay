@@ -2,23 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui.GameBooking;
+package ui.Parking;
 
 import Business.EcoSystem;
 import javax.swing.JOptionPane;
-import ui.LaundryBooking.ManageLaundryPanel;
 
 /**
  *
  * @author Sushant
- * 
  */
-public class BookGamePanel extends javax.swing.JPanel {
+public class BookParkPanel extends javax.swing.JPanel {
     private EcoSystem system;
+
     /**
-     * Creates new form BookGamePanel
+     * Creates new form BookPoolPanel
      */
-    public BookGamePanel(EcoSystem system) {
+    public BookParkPanel(EcoSystem system) {
         initComponents();
         this.system = system;
     }
@@ -34,20 +33,21 @@ public class BookGamePanel extends javax.swing.JPanel {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        btnManageGame = new javax.swing.JButton();
+        btnManagePark = new javax.swing.JButton();
         btnRequestQueue = new javax.swing.JButton();
         btnHome = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(204, 102, 255));
 
-        btnManageGame.setBackground(new java.awt.Color(0, 0, 0));
-        btnManageGame.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnManageGame.setForeground(new java.awt.Color(255, 255, 255));
-        btnManageGame.setText("MANAGE GAMES");
-        btnManageGame.addActionListener(new java.awt.event.ActionListener() {
+        btnManagePark.setBackground(new java.awt.Color(0, 0, 0));
+        btnManagePark.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnManagePark.setForeground(new java.awt.Color(255, 255, 255));
+        btnManagePark.setText("MANAGE PARKING");
+        btnManagePark.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        btnManagePark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageGameActionPerformed(evt);
+                btnManageParkActionPerformed(evt);
             }
         });
 
@@ -55,6 +55,7 @@ public class BookGamePanel extends javax.swing.JPanel {
         btnRequestQueue.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRequestQueue.setForeground(new java.awt.Color(255, 255, 255));
         btnRequestQueue.setText("MANAGE REQUESTS");
+        btnRequestQueue.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         btnRequestQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestQueueActionPerformed(evt);
@@ -65,6 +66,7 @@ public class BookGamePanel extends javax.swing.JPanel {
         btnHome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnHome.setForeground(new java.awt.Color(255, 255, 255));
         btnHome.setText("HOME");
+        btnHome.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         btnHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHomeActionPerformed(evt);
@@ -75,25 +77,27 @@ public class BookGamePanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRequestQueue)
-                    .addComponent(btnManageGame)
-                    .addComponent(btnHome))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnRequestQueue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnManagePark, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(221, 221, 221)
-                .addComponent(btnManageGame)
-                .addGap(29, 29, 29)
-                .addComponent(btnRequestQueue)
-                .addGap(36, 36, 36)
+                .addGap(195, 195, 195)
                 .addComponent(btnHome)
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addGap(83, 83, 83)
+                .addComponent(btnManagePark, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82)
+                .addComponent(btnRequestQueue)
+                .addContainerGap(222, Short.MAX_VALUE))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnHome, btnManagePark, btnRequestQueue});
 
         jSplitPane1.setLeftComponent(jPanel1);
 
@@ -105,48 +109,53 @@ public class BookGamePanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1218, Short.MAX_VALUE)
+            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1069, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 727, Short.MAX_VALUE)
+            .addComponent(jSplitPane1)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageGameActionPerformed
+    private void btnManageParkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageParkActionPerformed
         // TODO add your handling code here:
-        try {
-            ManageGamePanel managegamePanel = new ManageGamePanel(system);
-            jSplitPane1.setRightComponent(managegamePanel);
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    }//GEN-LAST:event_btnManageGameActionPerformed
+         try {
+        ManageParkPanel manageparkPanel = new ManageParkPanel(system);
+        jSplitPane1.setRightComponent(manageparkPanel);
+        jSplitPane1.revalidate();
+        jSplitPane1.repaint();
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+    }
+    }//GEN-LAST:event_btnManageParkActionPerformed
 
     private void btnRequestQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestQueueActionPerformed
         // TODO add your handling code here:
         try {
-            ManageGameRequestsPanel managegameRequestsPanel  = new ManageGameRequestsPanel(system);
-            jSplitPane1.setRightComponent(managegameRequestsPanel);
+            ManageParkRequestsPanel manageParkRequestsPanel = new ManageParkRequestsPanel(system);
+            jSplitPane1.setRightComponent(manageParkRequestsPanel);
         } catch(Exception e){
             JOptionPane.showMessageDialog(this, e.getMessage());
+            
         }
     }//GEN-LAST:event_btnRequestQueueActionPerformed
 
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
         // TODO add your handling code here:
         try {
-            HomeGamePanel homeGamePanel = new HomeGamePanel();
-            jSplitPane1.setRightComponent(homeGamePanel);
+            HomeParkPanel homeParkPanel = new HomeParkPanel();
+            jSplitPane1.setRightComponent(homeParkPanel);
         } catch(Exception e){
             JOptionPane.showMessageDialog(this, e.getMessage());
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnHomeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHome;
-    private javax.swing.JButton btnManageGame;
+    private javax.swing.JButton btnManagePark;
     private javax.swing.JButton btnRequestQueue;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

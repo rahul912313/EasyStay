@@ -1,45 +1,45 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Business;
 
-import Business.FoodMenu.FBItemDirectory;
-import Business.HomeKeeping.Laundry.LaundryDirectory;
-import Business.HomeKeeping.RoomClean.JanitorScheduleDirectory;
-import Business.Enjoyments.Gaming.GameDirectory;
-import Business.Enjoyments.Pool.PoolDirectory;
-import Business.Purchase.OnPremiseBuying.SouvenirDirectory;
-import Business.PaymentHistory.CustomerTransactionDirectory;
-import Business.VehicleService.VehicleBooking.VehicleDirectory;
+import Business.FoodandBev.Menu.FBItemDirectory;
+import Business.HouseKeeping.LaundryFacility.LaundryDirectory;
+import Business.HouseKeeping.RoomCleaning.JanitorScheduleDirectory;
+
+import Business.Recreation.GamingFacility.GameDirectory;
+import Business.Recreation.PoolFacility.PoolDirectory;
+import Business.Shopping.InhouseShopping.SouvenirDirectory;
+import Business.TransactionHistory.CustomerTransactionDirectory;
+import Business.Transportation.VehicleBooking.VehicleDirectory;
 import Business.User.UserDirectory;
 import Business.WorkRequest.FoodBevWorkRequestDirectory;
 import Business.WorkRequest.GameWorkRequestDirectory;
 import Business.WorkRequest.LaundryWorkRequestDirectory;
+
 import Business.WorkRequest.PoolWorkRequestDirectory;
 import Business.WorkRequest.VehicleWorkRequestDirectory;
+import Business.Parking.ParkingDirectory;  // Added import for ParkingDirectory
+import Business.WorkRequest.ParkingWorkRequestDirectory; // Added import for ParkingWorkRequestDirectory
 
-/**
- *
- * @author RAHUL
- */
 public class EcoSystem {
 
     private static EcoSystem ecoSystem;
-    UserDirectory userDirectory;
-    VehicleDirectory vehicleDirectory;
-    SouvenirDirectory souvenirDirectory;
-    PoolDirectory poolDirectory;
-    GameDirectory gameDirectory;
-    LaundryDirectory laundryDirectory;
-    FBItemDirectory fBItemDirectory;
-    FoodBevWorkRequestDirectory foodBevWorkRequestDirectory;
-    GameWorkRequestDirectory gameWorkRequestDirectory;
-    LaundryWorkRequestDirectory laundryWorkRequestDirectory;
-    PoolWorkRequestDirectory poolWorkRequestDirectory;
-    VehicleWorkRequestDirectory vehicleWorkRequestDirectory;
-    CustomerTransactionDirectory customerTransactionDirectory;
-    JanitorScheduleDirectory janitorScheduleDirectory;
+    private UserDirectory userDirectory;
+    private VehicleDirectory vehicleDirectory;
+    private SouvenirDirectory souvenirDirectory;
+    private PoolDirectory poolDirectory;
+    private GameDirectory gameDirectory;
+    private LaundryDirectory laundryDirectory;
+    private FBItemDirectory fBItemDirectory;
+    private FoodBevWorkRequestDirectory foodBevWorkRequestDirectory;
+    private GameWorkRequestDirectory gameWorkRequestDirectory;
+    private LaundryWorkRequestDirectory laundryWorkRequestDirectory;
+    private PoolWorkRequestDirectory poolWorkRequestDirectory;
+    private VehicleWorkRequestDirectory vehicleWorkRequestDirectory;
+    private CustomerTransactionDirectory customerTransactionDirectory;
+    private JanitorScheduleDirectory janitorScheduleDirectory;
+
+    // New fields for Parking
+    private ParkingDirectory parkingDirectory;
+    private ParkingWorkRequestDirectory parkingWorkRequestDirectory;
 
     public FoodBevWorkRequestDirectory getFoodBevWorkRequestDirectory() {
         return foodBevWorkRequestDirectory;
@@ -88,7 +88,7 @@ public class EcoSystem {
     public void setCustomerTransactionDirectory(CustomerTransactionDirectory customerTransactionDirectory) {
         this.customerTransactionDirectory = customerTransactionDirectory;
     }
-    
+
     public static EcoSystem getEcoSystem() {
         return ecoSystem;
     }
@@ -161,6 +161,29 @@ public class EcoSystem {
         this.janitorScheduleDirectory = janitorScheduleDirectory;
     }
 
+    // Getters and setters for Parking
+    public ParkingDirectory getParkingDirectory() {
+    if (parkingDirectory == null) {
+        parkingDirectory = new ParkingDirectory();
+    }
+    return parkingDirectory;
+}
+
+    public void setParkingDirectory(ParkingDirectory parkingDirectory) {
+        this.parkingDirectory = parkingDirectory;
+    }
+
+    public ParkingWorkRequestDirectory getParkingWorkRequestDirectory() {
+    if (parkingWorkRequestDirectory == null) {
+        parkingWorkRequestDirectory = new ParkingWorkRequestDirectory();
+    }
+    return parkingWorkRequestDirectory;
+}
+
+    public void setParkingWorkRequestDirectory(ParkingWorkRequestDirectory parkingWorkRequestDirectory) {
+        this.parkingWorkRequestDirectory = parkingWorkRequestDirectory;
+    }
+
     public static EcoSystem getInstance() {
         if (ecoSystem == null) {
             ecoSystem = new EcoSystem();
@@ -169,7 +192,6 @@ public class EcoSystem {
     }
 
     private EcoSystem() {
-
         userDirectory = new UserDirectory();
         vehicleDirectory = new VehicleDirectory();
         souvenirDirectory = new SouvenirDirectory();
@@ -184,6 +206,9 @@ public class EcoSystem {
         vehicleWorkRequestDirectory = new VehicleWorkRequestDirectory();
         customerTransactionDirectory = new CustomerTransactionDirectory();
         janitorScheduleDirectory = new JanitorScheduleDirectory();
-        
+
+        // Initialize Parking-related directories
+        parkingDirectory = new ParkingDirectory();
+        parkingWorkRequestDirectory = new ParkingWorkRequestDirectory();
     }
 }
