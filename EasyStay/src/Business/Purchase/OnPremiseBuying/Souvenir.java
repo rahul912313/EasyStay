@@ -6,7 +6,7 @@ package Business.Purchase.OnPremiseBuying;
 
 /**
  *
- * @author siddh
+ * @author kanishk
  */
 public class Souvenir {
 
