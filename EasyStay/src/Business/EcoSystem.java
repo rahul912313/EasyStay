@@ -1,14 +1,10 @@
 package Business;
 
+import Business.Enjoyments.Gaming.GameDirectory;
+import Business.Enjoyments.Pool.PoolDirectory;
 import Business.FoodandBev.Menu.FBItemDirectory;
-import Business.HouseKeeping.LaundryFacility.LaundryDirectory;
-import Business.HouseKeeping.RoomCleaning.JanitorScheduleDirectory;
-
-import Business.Recreation.GamingFacility.GameDirectory;
-import Business.Recreation.PoolFacility.PoolDirectory;
-import Business.Shopping.InhouseShopping.SouvenirDirectory;
-import Business.TransactionHistory.CustomerTransactionDirectory;
-import Business.Transportation.VehicleBooking.VehicleDirectory;
+import Business.HomeKeeping.Laundry.LaundryDirectory;
+import Business.HomeKeeping.RoomClean.JanitorScheduleDirectory;
 import Business.User.UserDirectory;
 import Business.WorkRequest.FoodBevWorkRequestDirectory;
 import Business.WorkRequest.GameWorkRequestDirectory;
@@ -17,6 +13,9 @@ import Business.WorkRequest.LaundryWorkRequestDirectory;
 import Business.WorkRequest.PoolWorkRequestDirectory;
 import Business.WorkRequest.VehicleWorkRequestDirectory;
 import Business.Parking.ParkingDirectory;  // Added import for ParkingDirectory
+import Business.PaymentHistory.CustomerTransactionDirectory;
+import Business.Purchase.OnPremiseBuying.SouvenirDirectory;
+import Business.VehicleService.Booking.VehicleDirectory;
 import Business.WorkRequest.ParkingWorkRequestDirectory; // Added import for ParkingWorkRequestDirectory
 
 public class EcoSystem {
