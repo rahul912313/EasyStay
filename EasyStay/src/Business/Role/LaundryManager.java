@@ -8,6 +8,6 @@ package Business.Role;
  *
  * @author kanishk
  */
-public class Customer {
+public class LaundryManager {
     
 }
