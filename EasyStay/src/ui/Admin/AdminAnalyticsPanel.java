@@ -15,7 +15,7 @@ import Business.WorkRequest.VehicleWorkRequest;
 
 /**
  *
- * @author Subbu
+ * @author Rushang
  */
 public class AdminAnalyticsPanel extends javax.swing.JPanel {
 
@@ -30,19 +30,19 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
         
         customerTxt.setEditable(false);
         foodManagerTxt.setEditable(false);
-        foodManagerTxt1.setEditable(false);
+        foodManagerTxt2.setEditable(false);
         gameInchargeTxt.setEditable(false);
-        gameInchargeTxt1.setEditable(false);
+        gameInchargeTxt2.setEditable(false);
         janitorTxt.setEditable(false);
         laundryManagerTxt.setEditable(false);
-        laundryManagerTxt1.setEditable(false);
+        laundryManagerTxt2.setEditable(false);
         poolInchargeTxt.setEditable(false);
-        poolInchargeTxt1.setEditable(false);
+        poolInchargeTxt2.setEditable(false);
         shopManagerTxt.setEditable(false);
         totalRequestTxt.setEditable(false);
-        totalRevenueTxt.setEditable(false);
+        totalRevenueTxt1.setEditable(false);
         vehicleContractorTxt.setEditable(false);
-        vehicleContractorTxt1.setEditable(false);
+        vehicleContractorTxt2.setEditable(false);
 
         populateFields();
     }
@@ -92,12 +92,15 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
         laundryManagerTxt2 = new javax.swing.JTextField();
         poolInchargeTxt2 = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(204, 102, 255));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel6.setText("Admin Analytics");
 
         jLabel15.setText("Total requests:");
+
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPane1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
 
         jLabel8.setText("Vehicle Contractors:");
 
@@ -226,6 +229,9 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jDesktopPane2.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPane2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel3.setText("Pending requests");
 
@@ -298,7 +304,7 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
                         .addComponent(jLabel5)
                         .addGap(55, 55, 55)
                         .addComponent(totalRevenueTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDesktopPane2Layout.setVerticalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,9 +357,9 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
                         .addComponent(jLabel6))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(200, 200, 200)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jDesktopPane1)
+                            .addComponent(jDesktopPane2))))
                 .addContainerGap(1544, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -361,11 +367,11 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(46, 46, 46)
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(155, 155, 155)
+                .addGap(113, 113, 113)
                 .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 307, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(totalRequestTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -515,13 +521,13 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
             janitorTxt.setText(String.valueOf(janitorCount));
             foodManagerTxt.setText(String.valueOf(foodManagerCount));
             shopManagerTxt.setText(String.valueOf(shopManagerCount));
-            totalRevenueTxt.setText(String.valueOf(totalRevenue));
+            totalRevenueTxt1.setText(String.valueOf(totalRevenue));
             totalRequestTxt.setText(String.valueOf(totalRequestCount));
-            vehicleContractorTxt1.setText(String.valueOf(vehiclePendingRequestCount));
-            poolInchargeTxt1.setText(String.valueOf(poolPendingRequestCount));
-            gameInchargeTxt1.setText(String.valueOf(gamePendingRequestCount));
-            laundryManagerTxt1.setText(String.valueOf(laundryPendingRequestCount));
-            foodManagerTxt1.setText(String.valueOf(foodBevPendingRequestCount));
+            vehicleContractorTxt2.setText(String.valueOf(vehiclePendingRequestCount));
+            poolInchargeTxt2.setText(String.valueOf(poolPendingRequestCount));
+            gameInchargeTxt2.setText(String.valueOf(gamePendingRequestCount));
+            laundryManagerTxt2.setText(String.valueOf(laundryPendingRequestCount));
+            foodManagerTxt2.setText(String.valueOf(foodBevPendingRequestCount));
 
         } catch (Exception e) {
 
