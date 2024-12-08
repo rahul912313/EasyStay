@@ -5,7 +5,7 @@
 package ui.Customer;
 
 import Business.EcoSystem;
-import Business.FoodandBev.Menu.FBItem;
+import Business.FoodandBev.Menu.FoodBevItem;
 import Business.User.User;
 import Business.WorkRequest.FoodBevWorkRequest;
 import java.awt.Color;
@@ -29,18 +29,18 @@ public class FoodBookingPanel extends javax.swing.JPanel {
      */
     EcoSystem system;
     User user;
-    ArrayList<FBItem> foodOrderList;
+    ArrayList<FoodBevItem> foodOrderList;
 
     public FoodBookingPanel(EcoSystem system, User user) {
         initComponents();
 
-        foodOrderList = new ArrayList<FBItem>();
+        foodOrderList = new ArrayList<FoodBevItem>();
         this.system = system;
         this.user = user;
 
         MutableComboBoxModel<String> model = new DefaultComboBoxModel<String>();
 
-        for (FBItem itemList : system.getFBItemDirectory().getFbItemDirectoryList()) {
+        for (FoodBevItem itemList : system.getFBItemDirectory().getFbItemDirectoryList()) {
             model.addElement(itemList.getFbName());
         }
 
@@ -248,7 +248,7 @@ public class FoodBookingPanel extends javax.swing.JPanel {
             if (chooseFoodDropdown.getSelectedItem() != null) {
 
                 String itemName = String.valueOf(chooseFoodDropdown.getSelectedItem());
-                FBItem itemDetails = system.getFBItemDirectory().getItemByName(itemName);
+                FoodBevItem itemDetails = system.getFBItemDirectory().getItemByName(itemName);
 
                 itemNameTxt.setText(itemDetails.getFbName());
                 itemCategoryTxt.setText(itemDetails.getCategory());
@@ -272,7 +272,7 @@ public class FoodBookingPanel extends javax.swing.JPanel {
             if (chooseFoodDropdown.getSelectedItem() != null) {
 
                 String itemName = String.valueOf(chooseFoodDropdown.getSelectedItem());
-                FBItem itemDetails = system.getFBItemDirectory().getItemByName(itemName);
+                FoodBevItem itemDetails = system.getFBItemDirectory().getItemByName(itemName);
 
                 Object[] newRow = new Object[3];
                 newRow[0] = itemDetails.getFbName();
@@ -305,7 +305,7 @@ public class FoodBookingPanel extends javax.swing.JPanel {
 
             DefaultTableModel model = (DefaultTableModel) itemListTable.getModel();
             String itemName = String.valueOf(model.getValueAt(index, 0));
-            FBItem itemDetails = system.getFBItemDirectory().getItemByName(itemName);
+            FoodBevItem itemDetails = system.getFBItemDirectory().getItemByName(itemName);
 
             model.removeRow(index);
             foodOrderList.remove(itemDetails);
@@ -333,7 +333,7 @@ public class FoodBookingPanel extends javax.swing.JPanel {
 
                 JOptionPane.showMessageDialog(this, "Food and Beverage order request sent to Manager");
 
-                foodOrderList = new ArrayList<FBItem>();
+                foodOrderList = new ArrayList<FoodBevItem>();
                 populateRequestTable();
 
                 model.setRowCount(0);
@@ -386,7 +386,7 @@ public class FoodBookingPanel extends javax.swing.JPanel {
                 float orderPrice = 0;
                 if (fbWorkRequest.getUserId().equals(user.getUserId())) {
 
-                    for (FBItem item : fbWorkRequest.getFbItemDetails()) {
+                    for (FoodBevItem item : fbWorkRequest.getFbItemDetails()) {
                         itemsList += item.getFbName() + ", ";
                         orderPrice += item.getPrice();
                     }

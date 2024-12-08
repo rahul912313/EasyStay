@@ -5,7 +5,7 @@
 package ui.Customer;
 
 import Business.EcoSystem;
-import Business.Recreation.PoolFacility.Pool;
+import Business.Enjoyments.Pool.Pool;
 import Business.User.User;
 import Business.WorkRequest.PoolWorkRequest;
 import java.awt.Color;

@@ -6,8 +6,8 @@ package ui.FoodandBev;
 
 import Business.EcoSystem;
 import Business.Email.EmailNotification;
-import Business.FoodandBev.Menu.FBItem;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.FoodandBev.Menu.FoodBevItem;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import Business.WorkRequest.FoodBevWorkRequest;
 import java.awt.Color;
@@ -59,7 +59,7 @@ public class WorkRequest extends javax.swing.JPanel {
         for (FoodBevWorkRequest pfbr : pendingFoodBevRequest) {
             ArrayList<String> foodItemNames = new ArrayList<String>();
             long foodItemsTotalPrice = 0;
-            for (FBItem fb : pfbr.getFbItemDetails()) {
+            for (FoodBevItem fb : pfbr.getFbItemDetails()) {
                 foodItemNames.add(fb.getFbName());
                 foodItemsTotalPrice += fb.getPrice();
             }
@@ -78,7 +78,7 @@ public class WorkRequest extends javax.swing.JPanel {
         for (FoodBevWorkRequest pfbr : non_pendingFoodBevRequest) {
             ArrayList<String> foodItemNames = new ArrayList<String>();
             long foodItemsTotalPrice = 0;
-            for (FBItem fb : pfbr.getFbItemDetails()) {
+            for (FoodBevItem fb : pfbr.getFbItemDetails()) {
                 foodItemNames.add(fb.getFbName());
                 foodItemsTotalPrice += fb.getPrice();
             }

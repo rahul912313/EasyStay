@@ -5,8 +5,8 @@
 package ui.LaundryBooking;
 
 import Business.EcoSystem;
-import Business.HouseKeeping.LaundryFacility.Laundry;
-import Business.Recreation.PoolFacility.Pool;
+import Business.HomeKeeping.Laundry.Laundry;
+import Business.Enjoyments.Pool.Pool;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 

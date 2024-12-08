@@ -4,7 +4,7 @@
  */
 package Business.WorkRequest;
 
-import Business.FoodandBev.Menu.FBItem;
+import Business.FoodandBev.Menu.FoodBevItem;
 import java.util.ArrayList;
 
 /**
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class FoodBevWorkRequest {
     
     String userId;
-    ArrayList<FBItem> fbItemDetails;
+    ArrayList<FoodBevItem> fbItemDetails;
     String status;
 
     public String getUserId() {
@@ -25,11 +25,11 @@ public class FoodBevWorkRequest {
         this.userId = userId;
     }
 
-    public ArrayList<FBItem> getFbItemDetails() {
+    public ArrayList<FoodBevItem> getFbItemDetails() {
         return fbItemDetails;
     }
 
-    public void setFbItemDetails(ArrayList<FBItem> fbItemDetails) {
+    public void setFbItemDetails(ArrayList<FoodBevItem> fbItemDetails) {
         this.fbItemDetails = fbItemDetails;
     }
 

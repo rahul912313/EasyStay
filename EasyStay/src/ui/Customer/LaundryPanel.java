@@ -5,7 +5,7 @@
 package ui.Customer;
 
 import Business.EcoSystem;
-import Business.HouseKeeping.LaundryFacility.Laundry;
+import Business.HomeKeeping.Laundry.Laundry;
 import Business.User.User;
 import Business.WorkRequest.LaundryWorkRequest;
 import java.awt.Color;

@@ -6,7 +6,7 @@ package ui.Parking;
 
 import Business.EcoSystem;
 import Business.Email.EmailNotification;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import Business.WorkRequest.ParkingWorkRequest;
 import java.awt.Color;
@@ -184,9 +184,6 @@ public class ManageParkRequestsPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(611, 611, 611)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(229, 229, 229)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 955, Short.MAX_VALUE)
@@ -195,7 +192,10 @@ public class ManageParkRequestsPanel extends javax.swing.JPanel {
                                 .addComponent(btnApprove, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(108, 108, 108)
                                 .addComponent(btnReject, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane2))))
+                            .addComponent(jScrollPane2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(592, 592, 592)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(279, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

@@ -5,7 +5,7 @@
 package ui.Admin;
 
 import Business.EcoSystem;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import Business.WorkRequest.FoodBevWorkRequest;
 import Business.WorkRequest.GameWorkRequest;
@@ -27,7 +27,7 @@ public class AdminAnalyticsPanel extends javax.swing.JPanel {
     public AdminAnalyticsPanel(EcoSystem system) {
         initComponents();
         this.system = system;
-        
+
         customerTxt.setEditable(false);
         foodManagerTxt.setEditable(false);
         foodManagerTxt2.setEditable(false);

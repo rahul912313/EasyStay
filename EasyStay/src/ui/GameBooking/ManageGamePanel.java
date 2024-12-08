@@ -5,8 +5,8 @@
 package ui.GameBooking;
 
 import Business.EcoSystem;
-import Business.Recreation.GamingFacility.Game;
-import Business.Transportation.VehicleBooking.Vehicle;
+import Business.Enjoyments.Gaming.Game;
+import Business.VehicleService.Booking.Vehicle;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 

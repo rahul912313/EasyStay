@@ -5,8 +5,8 @@
 package ui.Customer;
 
 import Business.EcoSystem;
-import Business.Shopping.InhouseShopping.Souvenir;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.Purchase.OnPremiseBuying.Souvenir;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;

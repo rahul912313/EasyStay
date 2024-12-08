@@ -5,8 +5,8 @@
 package ui.VehicleBooking;
 
 import Business.EcoSystem;
-import Business.FoodandBev.Menu.FBItem;
-import Business.Transportation.VehicleBooking.Vehicle;
+import Business.FoodandBev.Menu.FoodBevItem;
+import Business.VehicleService.Booking.Vehicle;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 

@@ -2,7 +2,7 @@ package Business;
 
 import Business.Enjoyments.Gaming.GameDirectory;
 import Business.Enjoyments.Pool.PoolDirectory;
-import Business.FoodandBev.Menu.FBItemDirectory;
+import Business.FoodandBev.Menu.FoodBevDirectory;
 import Business.HomeKeeping.Laundry.LaundryDirectory;
 import Business.HomeKeeping.RoomClean.JanitorScheduleDirectory;
 import Business.User.UserDirectory;
@@ -27,7 +27,7 @@ public class EcoSystem {
     private PoolDirectory poolDirectory;
     private GameDirectory gameDirectory;
     private LaundryDirectory laundryDirectory;
-    private FBItemDirectory fBItemDirectory;
+    private FoodBevDirectory fBItemDirectory;
     private FoodBevWorkRequestDirectory foodBevWorkRequestDirectory;
     private GameWorkRequestDirectory gameWorkRequestDirectory;
     private LaundryWorkRequestDirectory laundryWorkRequestDirectory;
@@ -144,11 +144,11 @@ public class EcoSystem {
         this.laundryDirectory = laundryDirectory;
     }
 
-    public FBItemDirectory getFBItemDirectory() {
+    public FoodBevDirectory getFBItemDirectory() {
         return fBItemDirectory;
     }
 
-    public void setfBItemDirectory(FBItemDirectory fBItemDirectory) {
+    public void setfBItemDirectory(FoodBevDirectory fBItemDirectory) {
         this.fBItemDirectory = fBItemDirectory;
     }
 
@@ -197,7 +197,7 @@ public class EcoSystem {
         poolDirectory = new PoolDirectory();
         gameDirectory = new GameDirectory();
         laundryDirectory = new LaundryDirectory();
-        fBItemDirectory = new FBItemDirectory();
+        fBItemDirectory = new FoodBevDirectory();
         foodBevWorkRequestDirectory = new FoodBevWorkRequestDirectory();
         gameWorkRequestDirectory = new GameWorkRequestDirectory();
         laundryWorkRequestDirectory = new LaundryWorkRequestDirectory();

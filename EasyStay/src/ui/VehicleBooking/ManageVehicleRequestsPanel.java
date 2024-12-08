@@ -6,8 +6,8 @@ package ui.VehicleBooking;
 
 import Business.EcoSystem;
 import Business.Email.EmailNotification;
-import Business.FoodandBev.Menu.FBItem;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.FoodandBev.Menu.FoodBevItem;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import Business.WorkRequest.FoodBevWorkRequest;
 import Business.WorkRequest.VehicleWorkRequest;

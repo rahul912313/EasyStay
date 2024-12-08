@@ -6,7 +6,7 @@ package ui.LaundryBooking;
 
 import Business.EcoSystem;
 import Business.Email.EmailNotification;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import Business.WorkRequest.LaundryWorkRequest;
 import Business.WorkRequest.PoolWorkRequest;

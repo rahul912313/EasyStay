@@ -6,7 +6,7 @@ package ui.GameBooking;
 
 import Business.EcoSystem;
 import Business.Email.EmailNotification;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import Business.WorkRequest.GameWorkRequest;
 import Business.WorkRequest.VehicleWorkRequest;

@@ -5,7 +5,7 @@
 package ui.FoodandBev;
 
 import Business.EcoSystem;
-import Business.FoodandBev.Menu.FBItem;
+import Business.FoodandBev.Menu.FoodBevItem;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -92,7 +92,7 @@ public class MenuPanel extends javax.swing.JPanel {
     private boolean menuDetailsExistence() {
             String menuId = jTextField1.getText();
             boolean exist = false;
-            for (FBItem fb : system.getFBItemDirectory().getFbItemDirectoryList()) {
+            for (FoodBevItem fb : system.getFBItemDirectory().getFbItemDirectoryList()) {
                 if (menuId.equals(fb.getFbItemId())) {
                     exist = true;
                     break;
@@ -101,13 +101,13 @@ public class MenuPanel extends javax.swing.JPanel {
             return exist;
     }
 
-    private FBItem setMenuData() {
+    private FoodBevItem setMenuData() {
             String menuId = jTextField1.getText();
             String category = String.valueOf(jComboBox1.getSelectedItem());
             String name = jTextField3.getText();
             double price = Double.parseDouble(jTextField4.getText());
 
-            FBItem fb = new FBItem();
+            FoodBevItem fb = new FoodBevItem();
             fb.setFbItemId(menuId);
             fb.setCategory(category);
             fb.setFbName(name);
@@ -121,7 +121,7 @@ public class MenuPanel extends javax.swing.JPanel {
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             model.setRowCount(0);
 
-            for (FBItem fb : system.getFBItemDirectory().getFbItemDirectoryList()) {
+            for (FoodBevItem fb : system.getFBItemDirectory().getFbItemDirectoryList()) {
 
                 Object[] newRow = new Object[4];
                 newRow[0] = fb;
@@ -307,7 +307,7 @@ public class MenuPanel extends javax.swing.JPanel {
             }
 
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            FBItem selectedMenuItem = (FBItem) model.getValueAt(index, 0);
+            FoodBevItem selectedMenuItem = (FoodBevItem) model.getValueAt(index, 0);
 
             jTextField1.setText(selectedMenuItem.getFbItemId());
             jComboBox1.setSelectedItem(selectedMenuItem.getCategory());
@@ -327,7 +327,7 @@ public class MenuPanel extends javax.swing.JPanel {
                 return;
             }
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            FBItem selectedMenuItem = (FBItem) model.getValueAt(selectedRowIndex, 0);
+            FoodBevItem selectedMenuItem = (FoodBevItem) model.getValueAt(selectedRowIndex, 0);
             system.getFBItemDirectory().deleteMenuData(selectedMenuItem);
             JOptionPane.showMessageDialog(this, "Selected menu data deleted");
             resetMenuData();
@@ -345,9 +345,9 @@ public class MenuPanel extends javax.swing.JPanel {
 
             if (!validation1) {
                 if (menuDetailsExistence()) {
-                    FBItem updatedMenuData = setMenuData();
+                    FoodBevItem updatedMenuData = setMenuData();
                     int index = 0;
-                    for (FBItem fb : system.getFBItemDirectory().getFbItemDirectoryList()) {
+                    for (FoodBevItem fb : system.getFBItemDirectory().getFbItemDirectoryList()) {
                         if (menuId.equals(fb.getFbItemId())) {
                             system.getFBItemDirectory().updateExistingMenuData(updatedMenuData, index);
                             break;

@@ -5,7 +5,7 @@
 package ui.Shopping;
 
 import Business.EcoSystem;
-import Business.Shopping.InhouseShopping.Souvenir;
+import Business.Purchase.OnPremiseBuying.Souvenir;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -165,12 +165,12 @@ public class ShopPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable1);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(166, 57, 452, 150);
+        jScrollPane1.setBounds(180, 60, 452, 150);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Shop");
         add(jLabel1);
-        jLabel1.setBounds(368, 22, 60, 32);
+        jLabel1.setBounds(368, 22, 80, 30);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -182,7 +182,7 @@ public class ShopPanel extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(313, 237, 72, 27);
+        jButton1.setBounds(313, 237, 72, 23);
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -194,24 +194,24 @@ public class ShopPanel extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(403, 237, 80, 27);
+        jButton2.setBounds(403, 237, 80, 23);
         add(txtId);
-        txtId.setBounds(395, 314, 107, 22);
+        txtId.setBounds(395, 314, 107, 23);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Id");
         add(jLabel2);
-        jLabel2.setBounds(303, 317, 20, 20);
+        jLabel2.setBounds(303, 317, 20, 17);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Name");
         add(jLabel3);
-        jLabel3.setBounds(305, 358, 40, 20);
+        jLabel3.setBounds(305, 358, 41, 17);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Price");
         add(jLabel4);
-        jLabel4.setBounds(305, 399, 34, 20);
+        jLabel4.setBounds(305, 399, 35, 17);
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,9 +219,9 @@ public class ShopPanel extends javax.swing.JPanel {
             }
         });
         add(txtName);
-        txtName.setBounds(395, 355, 107, 22);
+        txtName.setBounds(395, 355, 107, 23);
         add(txtPrice);
-        txtPrice.setBounds(395, 396, 107, 22);
+        txtPrice.setBounds(395, 396, 107, 23);
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -233,7 +233,7 @@ public class ShopPanel extends javax.swing.JPanel {
             }
         });
         add(jButton3);
-        jButton3.setBounds(305, 449, 80, 27);
+        jButton3.setBounds(305, 449, 80, 23);
 
         jButton4.setBackground(new java.awt.Color(0, 0, 0));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -245,7 +245,7 @@ public class ShopPanel extends javax.swing.JPanel {
             }
         });
         add(jButton4);
-        jButton4.setBounds(403, 449, 79, 27);
+        jButton4.setBounds(403, 449, 80, 23);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed

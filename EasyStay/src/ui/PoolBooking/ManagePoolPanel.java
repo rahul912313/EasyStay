@@ -5,8 +5,8 @@
 package ui.PoolBooking;
 
 import Business.EcoSystem;
-import Business.Recreation.PoolFacility.Pool;
-import Business.Transportation.VehicleBooking.Vehicle;
+import Business.Enjoyments.Pool.Pool;
+import Business.VehicleService.Booking.Vehicle;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 

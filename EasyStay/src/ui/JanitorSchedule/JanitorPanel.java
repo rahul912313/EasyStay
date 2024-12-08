@@ -5,7 +5,7 @@
 package ui.JanitorSchedule;
 
 import Business.EcoSystem;
-import Business.HouseKeeping.RoomCleaning.Schedule;
+import Business.HomeKeeping.RoomClean.Schedule;
 import Business.User.User;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;

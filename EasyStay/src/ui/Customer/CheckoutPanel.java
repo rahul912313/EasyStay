@@ -5,7 +5,7 @@
 package ui.Customer;
 
 import Business.EcoSystem;
-import Business.TransactionHistory.CustomerTransaction;
+import Business.PaymentHistory.CustomerTransaction;
 import Business.User.User;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;

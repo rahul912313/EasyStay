@@ -5,7 +5,7 @@
 package ui.Customer;
 
 import Business.EcoSystem;
-import Business.Transportation.VehicleBooking.Vehicle;
+import Business.VehicleService.Booking.Vehicle;
 import Business.User.User;
 import Business.WorkRequest.VehicleWorkRequest;
 import java.awt.Color;
