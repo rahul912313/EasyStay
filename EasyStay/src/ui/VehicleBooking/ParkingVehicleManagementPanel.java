@@ -250,6 +250,7 @@ public class ParkingVehicleManagementPanel extends javax.swing.JPanel {
 
                 int numberOfHours = Integer.parseInt(numberOfHoursTxt.getText());
 
+
                 bookPark.setParkingDetails(parkDetails);
                 bookPark.setBookingDate(bookingDate);
                 bookPark.setNumberOfHours(numberOfHours);
@@ -286,10 +287,12 @@ public class ParkingVehicleManagementPanel extends javax.swing.JPanel {
     private javax.swing.JTable parkWorkQueueTable;
     private javax.swing.JButton viewParkBtn;
     // End of variables declaration//GEN-END:variables
+
 private void populateRequestTable() {
     try {
         DefaultTableModel model = (DefaultTableModel) parkWorkQueueTable.getModel();
         model.setRowCount(0);  // Clear the existing rows
+
 
         for (ParkingWorkRequest parkWorkRequest : system.getParkingWorkRequestDirectory().getParkingWorkRequestList()) {
             Object[] newRow = new Object[4]; 
@@ -297,6 +300,7 @@ private void populateRequestTable() {
             newRow[1] = parkWorkRequest.getBookingDate();
             newRow[2] = parkWorkRequest.getNumberOfHours();
             newRow[3] = parkWorkRequest.getStatus(); 
+
 
             model.addRow(newRow);  // Add the row to the model
         }
@@ -320,7 +324,9 @@ private void formatRows() {
         public java.awt.Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
             final java.awt.Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
             
+
             String status = String.valueOf(model.getValueAt(row, 3)); 
+
             if ("Pending".equals(status)) {
                 c.setBackground(Color.WHITE);
             } else if ("Approved".equals(status)) {
