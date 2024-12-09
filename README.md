@@ -91,6 +91,31 @@
 
 ---
 
+## High-Level Architecture
+
+The high-level architecture includes various components such as:
+
+- **User Interface**: Where customers can make requests.
+- **Service Management Modules**: For handling different services (e.g., food, pool, laundry).
+- **Request & Approval System**: For managing requests sent from customers to relevant managers.
+- **Notification System**: For sending email notifications to customers.
+- **Google Maps Integration**: For vehicle pick-up location selection.
+
+## Files Attached
+
+- **EasyStay-Revolutionizing-Hotel-Management.pptx**: Presentation for EasyStay project.
+- **Project Proposal.docx**: Detailed project proposal document.
+- **UML class diagram.pdf**: UML class diagram for system components and relationships.
+- **High Level Component Diagram.pdf**: High-level component diagram of the system.
+- **README.md**: This README file with project details.
+
+## Libraries & Technologies Used
+
+- **javax (JavaMail API)**: Used for sending email notifications to customers regarding their bookings and requests.
+- **JCalendar**: Integrated for managing dates in the user interface, specifically for scheduling services and reservations.
+- **DB40**: Used for database management and storage, ensuring smooth data handling and query execution.
+
+
 ## Team Members  
 
 - **Rahul Patil** (002308778)  
